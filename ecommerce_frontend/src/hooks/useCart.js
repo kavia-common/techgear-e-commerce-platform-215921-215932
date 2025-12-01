@@ -1,0 +1,10 @@
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
+
+// PUBLIC_INTERFACE
+export default function useCart() {
+  /** Returns cart context for components. */
+  const ctx = useContext(CartContext);
+  if (!ctx) throw new Error('useCart must be used within CartProvider');
+  return ctx;
+}

@@ -1,13 +1,81 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --ocean-primary: #2563EB;
+  --ocean-secondary: #F59E0B;
+  --ocean-error: #EF4444;
+  --ocean-bg: #f9fafb;
+  --ocean-surface: #ffffff;
+  --ocean-text: #111827;
+  --ocean-muted: #6b7280;
+  --ocean-border: #e5e7eb;
+  --ocean-shadow: 0 1px 2px rgba(0,0,0,.05), 0 4px 6px -2px rgba(0,0,0,.05);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background: var(--ocean-bg);
+  color: var(--ocean-text);
+  line-height: 1.5;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.page-container {
+  min-height: calc(100vh - 160px);
+  padding: 24px 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--ocean-primary);
+  background: var(--ocean-primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+  box-shadow: var(--ocean-shadow);
+}
+.btn.secondary {
+  background: #fff;
+  color: var(--ocean-primary);
+}
+.btn:hover { filter: brightness(.95); transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+.input, select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--ocean-border);
+  background: #fff;
+  outline: none;
+}
+
+.card {
+  border: 1px solid var(--ocean-border);
+  border-radius: 14px;
+  background: var(--ocean-surface);
+  box-shadow: var(--ocean-shadow);
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
 }

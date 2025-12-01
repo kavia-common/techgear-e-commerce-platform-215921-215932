@@ -1,0 +1,34 @@
+:root {
+  --ocean-primary: #2563EB;
+  --ocean-primary-600: #1D4ED8;
+  --ocean-secondary: #F59E0B;
+  --ocean-error: #EF4444;
+  --ocean-bg: #f9fafb;
+  --ocean-surface: #ffffff;
+  --ocean-text: #111827;
+  --ocean-muted: #6b7280;
+  --ocean-border: #e5e7eb;
+  --ocean-success: #10B981;
+  --ocean-badge: #1f2937;
+  --ocean-shadow: 0 1px 2px rgba(0,0,0,.05), 0 4px 6px -2px rgba(0,0,0,.05);
+}
+
+.dark {
+  --ocean-bg: #0b1220;
+  --ocean-surface: #0f172a;
+  --ocean-text: #e5e7eb;
+  --ocean-muted: #9ca3af;
+  --ocean-border: #1f2937;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: var(--ocean-badge);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
